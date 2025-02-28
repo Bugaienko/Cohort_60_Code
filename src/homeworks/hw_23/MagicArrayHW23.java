@@ -1,4 +1,4 @@
-package homeworks.hw_22;
+package homeworks.hw_23;
 
 import java.util.Arrays;
 
@@ -7,17 +7,17 @@ import java.util.Arrays;
  * {@code @date} 26.02.2025
  */
 
-public class MagicArrayEncaps {
-    int[] array;
-    int cursor; // по умолчанию = 0
+public class MagicArrayHW23 {
+    private int[] array;
+    private int cursor; // по умолчанию = 0
 
     // Методы, расширяющие функционал массива
 
-    public MagicArrayEncaps() {
+    public MagicArrayHW23() {
         this.array = new int[10]; // [0, 0...0]
     }
 
-    public MagicArrayEncaps(int[] array) {
+    public MagicArrayHW23(int[] array) {
 
         if (array == null || array.length == 0) {
             this.array = new int[10];
@@ -29,7 +29,7 @@ public class MagicArrayEncaps {
     }
 
     // Добавление в массив одного элемента
-    void add(int value) {
+    public void add(int value) {
 
         // Проверка! Есть ли свободное место во внутреннем массиве
         // Если места нет - нужно добавить место
@@ -44,7 +44,7 @@ public class MagicArrayEncaps {
     }
 
     // Динамическое расширение массива
-    void expandArray() {
+    private void expandArray() {
         System.out.println("Расширяем внутренний массив! Курсор = " + cursor);
         /*
         1. Создать новый массив бОльшего размера (в 2 раза больше)
@@ -67,7 +67,7 @@ public class MagicArrayEncaps {
     }
 
     // Добавление в массив нескольких элементов
-    void add(int... numbers) {
+    public void add(int... numbers) {
         // с numbers я могу обращаться точно также, как со ссылкой на массив int
 //        System.out.println("Принял несколько int: " + numbers.length);
 //        System.out.println(Arrays.toString(numbers));
@@ -95,12 +95,12 @@ public class MagicArrayEncaps {
     }
 
     // Текущее кол-во элементов в массиве
-    int size() {
+    public int size() {
         return cursor;
     }
 
     // Возвращает значение по индексу
-    int get(int index) {
+    public int get(int index) {
         // Проконтролировать входящий индекс!
 
         if (index >= 0 && index < cursor) {
@@ -116,7 +116,7 @@ public class MagicArrayEncaps {
     }
 
     // Удалить элемент по индексу. Вернуть старое значение
-    int remove(int index) {
+    public int remove(int index) {
         /*
         1. Проверка индекса на валидность
         2. Удалить значение по индексу
@@ -147,7 +147,7 @@ public class MagicArrayEncaps {
 
     // Поиск по значению.
     // {1, 100, 5, 24, 0, 5} -> indexOf(5) = 2; indexOf(50) = -1;
-    int indexOf(int value) {
+    public int indexOf(int value) {
         // Перебираю все значимые элементы.
         // Если элемент равен искомому - вернуть индекс такого элемента
         // Если перебрал все элементы =- не нашел совпадений - вернуть -1
@@ -165,7 +165,7 @@ public class MagicArrayEncaps {
 
     // Индекс последнего вхождения.
     // {1, 100, 5, 100, 24, 0, 100} -> lastIndexOf(100) -> 6
-    int lastIndexOf(int value) {
+    public int lastIndexOf(int value) {
 
         for (int i = cursor - 1; i >= 0; i--) {
             if (array[i] == value) return i;
@@ -187,7 +187,7 @@ public class MagicArrayEncaps {
     }
 
     // Удаление элемента по значению
-    boolean removeByValue(int value) {
+    public boolean removeByValue(int value) {
                /*
         1. Есть ли элемент с  таким значением - indexOf
         2. Если элемента нет - ничего не пытаемся удалить - возвращаем false
@@ -217,7 +217,7 @@ public class MagicArrayEncaps {
     }
 
 
-    void test() {
+    public void test() {
         System.out.println(Arrays.toString(array));
     }
 

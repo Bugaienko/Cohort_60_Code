@@ -22,7 +22,6 @@ public class ArrayEncapsTest {
 
         test[3] = 1000;
 
-
         magic.add(20, 330, 40);
         magic.test();
         System.out.println(magic.toString());
