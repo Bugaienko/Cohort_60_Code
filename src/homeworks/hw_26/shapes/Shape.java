@@ -1,4 +1,4 @@
-package hw_26.shapes;
+package homeworks.hw_26.shapes;
 
 /**
  * @author Sergey Bugaenko

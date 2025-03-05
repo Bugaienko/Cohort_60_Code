@@ -1,4 +1,4 @@
-package hw_26;
+package homeworks.hw_26;
 
 /**
  * @author Sergey Bugaenko

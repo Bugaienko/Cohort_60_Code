@@ -1,6 +1,5 @@
-package hw_26;
+package homeworks.hw_26;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
