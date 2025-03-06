@@ -1,4 +1,9 @@
-package lesson_28.animals;
+package consultations.cons_12;
+
+import lesson_28.animals.Animal;
+import lesson_28.animals.Cat;
+import lesson_28.animals.Dog;
+import lesson_28.animals.Hamster;
 
 /**
  * @author Sergey Bugaenko
@@ -59,6 +64,31 @@ public class CastingExample {
 
 
         // Todo Нисходящее преобразование
+
+        Animal animalLink = new Cat();
+        Cat catLink;
+
+        Animal animalDog = new Dog();
+
+        if (animalLink instanceof Cat) {
+            catLink = (Cat) animal;
+            catLink.eat();
+        }
+
+        catLink = (Cat) animalLink;
+        catLink.eat();
+
+
+        if (animalDog instanceof Cat) {
+            catLink = (Cat) animalDog;
+            catLink.eat();
+        }else {
+            System.out.println("Этот объект нельзя привести к коту");
+        }
+
+//        int x = 10;
+//        double dVar = x;
+//        x = (int) dVar;
 
 
     }

@@ -16,3 +16,16 @@ public class Hamster extends Animal {
         return "Hamster!";
     }
 }
+
+// User / Reader  / Student extends UserDetails
+// priv Str email. login, userId, nickName
+// priv password
+
+// UserDetails
+// Srting getLogin() {
+//    return nickName;
+//}
+
+// String getPassword();
+
+// auro(UserDetails details)
