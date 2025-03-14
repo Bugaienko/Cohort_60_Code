@@ -1,4 +1,4 @@
-package lesson_33.persons;
+package lesson_34.persons;
 
 /**
  * @author Sergey Bugaenko
@@ -8,10 +8,13 @@ package lesson_33.persons;
 public class PersonApp {
     public static void main(String[] args) {
 
-        Person33 person = new Person33("test@mailne.t", "qqqwerty1!");
+        Person person = new Person("test@mailne.t", "qqqwerty1!");
 
         person.setEmail("test@ma1.1il.net");
 
+        System.out.println(person);
+
+        person.setPassword("QWE4RTYqwwe%");
         System.out.println(person);
 
 

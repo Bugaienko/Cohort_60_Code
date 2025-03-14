@@ -5,12 +5,12 @@ package lesson_33.persons;
  * {@code @date} 13.03.2025
  */
 
-public class Person {
+public class Person33 {
 
     private String email;
     private String password;
 
-    public Person(String email, String password) {
+    public Person33(String email, String password) {
         setEmail(email);
         this.password = password;
     }
