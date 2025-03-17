@@ -1,4 +1,4 @@
-package lesson_34.persons;
+package homeworks.hw_34;
 
 /**
  * @author Sergey Bugaenko
