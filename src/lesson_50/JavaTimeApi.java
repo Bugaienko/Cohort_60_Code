@@ -195,9 +195,15 @@ public class JavaTimeApi {
         // сколько дней между этими датами?
 
         String dateStr1 = "15-12-2022 20-46";
+        String dateStr2 = "13-01-2023 00-47";
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm");
-        LocalDateTime parseDate2 = LocalDateTime.parse(dateStr1, formatter2);
-        System.out.println("parseDate2: " + parseDate2);
+        LocalDateTime parseDateFirst = LocalDateTime.parse(dateStr1, formatter2);
+        System.out.println("parseDate2: " + parseDateFirst);
+        System.out.println(parseDateFirst.getMonth() + " | " + parseDateFirst.getDayOfMonth() + " | " + parseDateFirst.getHour());
+        LocalDateTime parseDateSecond = LocalDateTime.parse(dateStr2, formatter2);
+        System.out.println("день недели второй даты" + parseDateSecond.getDayOfWeek());
+        System.out.println(parseDateSecond.getDayOfWeek().getValue());
+        System.out.println("дней между датами: " + parseDateFirst.until(parseDateSecond, ChronoUnit.DAYS));
 
 
 
